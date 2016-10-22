@@ -17,7 +17,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
-    
+    //vee
 //    
 //    NSDictionary *inventory = @{
 //                                @"UserName" : @"ios",
@@ -35,29 +35,29 @@
 //        jsonString = [[NSString alloc] initWithData:jsonData encoding:NSUTF8StringEncoding];
 //        NSLog(@"post data %@",jsonString);
 //    }
-//    
-//    
-//    NSURL *URL = [NSURL URLWithString:@"http://www.abercrombie.com/anf/nativeapp/Feeds/promotions.json"];
-//    NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:URL];
-//    
-//    NSURLSessionConfiguration *config = [NSURLSessionConfiguration defaultSessionConfiguration];
-//    NSURLSession *session = [NSURLSession sessionWithConfiguration:config];
-//    
-//    
-//    [request setHTTPMethod:@"GET"];
-//    
-//    NSURLSessionDataTask *dataTask = [session dataTaskWithRequest:request completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
-//        dispatch_async(dispatch_get_main_queue(), ^{
-//            [self responseHandler:data Response:response Error:error tag:0];
-//        });
-//        
-////        NSDictionary *dataJSON = [NSJSONSerialization JSONObjectWithData:data options:0 error:&error];
-////        NSLog(@"%@", dataJSON);
-//        
-//        
-//    }];
-//    [dataTask resume];
-//    
+    
+    
+    NSURL *URL = [NSURL URLWithString:@"http://www.abercrombie.com/anf/nativeapp/Feeds/promotions.json"];
+    NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:URL];
+    
+    NSURLSessionConfiguration *config = [NSURLSessionConfiguration defaultSessionConfiguration];
+    NSURLSession *session = [NSURLSession sessionWithConfiguration:config];
+    
+    
+    [request setHTTPMethod:@"GET"];
+    
+    NSURLSessionDataTask *dataTask = [session dataTaskWithRequest:request completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [self responseHandler:data Response:response Error:error tag:0];
+        });
+        
+//        NSDictionary *dataJSON = [NSJSONSerialization JSONObjectWithData:data options:0 error:&error];
+//        NSLog(@"%@", dataJSON);
+        
+        
+    }];
+    [dataTask resume];
+    
     
     
     
