@@ -46,6 +46,8 @@
     NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:URL];
     
     NSURLSessionConfiguration *config = [NSURLSessionConfiguration defaultSessionConfiguration];
+    
+
     NSURLSession *session = [NSURLSession sessionWithConfiguration:config];
     
     
@@ -55,11 +57,14 @@
         dispatch_async(dispatch_get_main_queue(), ^{
             [self responseHandler:data Response:response Error:error tag:0];
         });
+        /**
+        NSDictionary *dataJSON = [NSJSONSerialization JSONObjectWithData:data options:0 error:&error];
+        NSLog(@"%@", dataJSON);
         
-//        NSDictionary *dataJSON = [NSJSONSerialization JSONObjectWithData:data options:0 error:&error];
-//        NSLog(@"%@", dataJSON);
-        
-        
+         
+         
+         
+      **/
     }];
     [dataTask resume];
     
