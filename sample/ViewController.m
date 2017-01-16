@@ -7,7 +7,7 @@
 //
 
 #import "ViewController.h"
-
+#import "SecViewController.h"
 @interface ViewController ()
 
 @end
@@ -16,6 +16,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    _tem_text.text =@"dfgsdfhgsfghshg";
     
     NSLog(@"added test key fro git");
     //added git test key
@@ -42,37 +43,37 @@
 //    }
     
     
-    NSURL *URL = [NSURL URLWithString:@"http://www.abercrombie.com/anf/nativeapp/Feeds/promotions.json"];
-    NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:URL];
-    
-    NSURLSessionConfiguration *config = [NSURLSessionConfiguration defaultSessionConfiguration];
-    
-
-    NSURLSession *session = [NSURLSession sessionWithConfiguration:config];
-    
-    
-    [request setHTTPMethod:@"GET"];
-    
-    NSURLSessionDataTask *dataTask = [session dataTaskWithRequest:request completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
-        dispatch_async(dispatch_get_main_queue(), ^{
-            [self responseHandler:data Response:response Error:error tag:0];
-        });
-        /**
-        NSDictionary *dataJSON = [NSJSONSerialization JSONObjectWithData:data options:0 error:&error];
-        NSLog(@"%@", dataJSON);
+           NSURL *URL = [NSURL URLWithString:@"https://www.reddit.com/subreddits/search.json?q=reactjs"];
+       NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:URL];
+       
+       NSURLSessionConfiguration *config = [NSURLSessionConfiguration defaultSessionConfiguration];
+       
+       
+        NSURLSession *session = [NSURLSession sessionWithConfiguration:config];
         
-         
-         
-         
-      **/
-    }];
-    [dataTask resume];
+        
+        [request setHTTPMethod:@"GET"];
+        
+        NSURLSessionDataTask *dataTask = [session dataTaskWithRequest:request completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
+            dispatch_async(dispatch_get_main_queue(), ^{
+                [self responseHandler:data Response:response Error:error tag:0];
+           });
+           /**
+            NSDictionary *dataJSON = [NSJSONSerialization JSONObjectWithData:data options:0 error:&error];
+            NSLog(@"%@", dataJSON);
+            
+           
+            
+            
+            **/
+       }];
+       [dataTask resume];
+       
+
+        
+        
     
-    
-    // testung with tejesh
-    
-    
-    
+    }
     
       
     
@@ -111,16 +112,32 @@
             NSLog(@"Pailndrome");
     }
 */
-    
-   //dfgsd
-    //
-}
+
 
 -(void)responseHandler:(NSData *)data Response:(NSURLResponse *)response Error:(NSError *)error tag:(NSInteger)tag {
-            NSDictionary *dataJSON = [NSJSONSerialization JSONObjectWithData:data options:0 error:&error];
-            NSLog(@"%@", dataJSON);
     
-}
+    NSDictionary *dataJSON = [NSJSONSerialization JSONObjectWithData:data options:0 error:&error];
+    //NSLog(@"%@", dataJSON);
+    //_hyperText.text =[NSString stringWithFormat:@"%@",dataJSON];
+    NSDictionary *schedule_dict = [dataJSON objectForKey:@"data"];
+   // NSLog(@"the schedule_dict %@", schedule_dict);
+//    NSDictionary *children_dict = [[schedule_dict objectForKey:@"children"] objectAtIndex:1];
+//
+//    NSLog(@"the schedule_dict %@", children_dict);
+//    NSDictionary *schedule_dict123 = [children_dict valueForKey:@"data"];
+//    NSLog(@"the schedule_dict123 %@", schedule_dict123);
+//
+//    for(NSDictionary * dict in children_dict)
+//    {
+//        
+////       //NSString *title = [dict valueForKey:@"title"];
+//        NSLog(@"the title is : %@",[dict objectForKey:@"display_name"]);
+////        //[periodArray addObject:[dict valueForKey:@"period"]];
+////        
+//    }
+
+    
+    }
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
@@ -133,5 +150,19 @@ didReceiveResponse:(NSURLResponse *)response
     
     
 }
+
+
+    
+    
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    if ([segue.identifier isEqualToString:@"moveToSec"]) {
+       // NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
+        SecViewController *destViewController = segue.destinationViewController;
+       // destViewController.recipeName = [recipes objectAtIndex:indexPath.row];
+    }
+}
+
+
+
 
 @end

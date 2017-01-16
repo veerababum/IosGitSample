@@ -9,6 +9,8 @@
 #import <UIKit/UIKit.h>
 
 @interface ViewController : UIViewController<NSURLSessionDataDelegate,NSURLSessionDownloadDelegate,NSURLSessionTaskDelegate,NSURLSessionStreamDelegate>
+@property (weak, nonatomic) IBOutlet UITextField *tem_text;
+@property (weak, nonatomic) IBOutlet UITextView *hyperText;
 
 
 @end
