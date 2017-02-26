@@ -19,7 +19,6 @@
     _tem_text.text =@"dfgsdfhgsfghshg";
     
   
-    //testing 3 time
 //    
 //    NSDictionary *inventory = @{
 //                                @"UserName" : @"ios",
