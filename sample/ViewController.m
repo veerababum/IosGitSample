@@ -18,11 +18,7 @@
     [super viewDidLoad];
     _tem_text.text =@"dfgsdfhgsfghshg";
     
-    NSLog(@"added test key fro git");
-    //added git test key
-    // Do any additional setup after loading the view, typically from a nib.
-    //vee
-    // testing added.....
+  
     //testing 3 time
 //    
 //    NSDictionary *inventory = @{
