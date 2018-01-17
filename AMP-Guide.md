@@ -18,8 +18,8 @@
 
 *  Testing is Completed change the active report in the AMP portal so it is not modified
 
-*  Here is a step by step guide: [AMP For IOS Installation Guide](https://support.ssbbartgroup.com/hc/en-us/articles/205761419-Testing-with-AMP-for-iOS)
+*  Here is a step by step guide: [Testing With AMP For IOS](https://support.ssbbartgroup.com/hc/en-us/articles/205761419-Testing-with-AMP-for-iOS)
 
 ### For more info: [AMP Report Navigation](https://support.ssbbartgroup.com/hc/en-us/articles/207167806-AMP-Report-Navigation)
 
-### Finally: share the AMP report with the MCoE reviewers
+### Finally: Share the AMP report with the MCoE reviewers
