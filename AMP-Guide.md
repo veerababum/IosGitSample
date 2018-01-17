@@ -7,10 +7,10 @@
 * SSBBartGroup is located at: [SSB](https://kaiser.ssbbartgroup.com)
 
 ## AMP For IOS Installation Guide
- * create the report and set is as the active report in the AMP portal and Download the iOS Accessibility Test Enabler Bundle
+ * Create the report and set is as the active report in the AMP portal and Download the iOS Accessibility Test Enabler Bundle
  * Open the AccesibilityTestEnabler folder and Copy the the AccessibilityTestEnablement.bundle file and the libAccessibility.a file into your project.
 *  Add all of the additionally required Frameworks. 
-* launch the Xcode simulator and turn on the "Accessibility Inspector". 
+* Launch the Xcode simulator and turn on the "Accessibility Inspector". 
 *  Here is a step by step guide: [AMP For IOS Installation Guide](https://support.ssbbartgroup.com/hc/en-us/articles/206475325-AMP-for-iOS-Installation-Guide)
 
 ## Testing With AMP For IOS
