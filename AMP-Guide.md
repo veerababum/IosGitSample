@@ -21,6 +21,6 @@
 
 *  Here is a step by step guide: [Testing With AMP For IOS](https://support.ssbbartgroup.com/hc/en-us/articles/205761419-Testing-with-AMP-for-iOS)
 
-### For more info: [AMP Report Navigation](https://support.ssbbartgroup.com/hc/en-us/articles/207167806-AMP-Report-Navigation)
+### For more infomation of report: [AMP Report Navigation](https://support.ssbbartgroup.com/hc/en-us/articles/207167806-AMP-Report-Navigation)
 
 ### Finally: Share the AMP report with the MCoE reviewers
