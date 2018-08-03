@@ -16,7 +16,6 @@
 
 - (void)viewDidLoad {
     
-    //KV code added
     [super viewDidLoad];
     _tem_text.text =@"dfgsdfhgsfghshg";
     
